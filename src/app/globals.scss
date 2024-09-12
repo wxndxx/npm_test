@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import './_normalize.scss';
+
+@layer base {
+    .unbounded {
+        font-family: "Unbounded", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .inter {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+    }
+}
+body {
+    min-height: 100vh;
+    overflow-y: scroll;
+    //leading-[110%] tracking-[4%]
+    @apply inter bg-gray1 text-gray6 flex flex-col font-medium;
+}
+
+.modal-open {
+    position: relative;
+    overflow: hidden;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+// html::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   ::-webkit-scrollbar{
+//     width: 12px;
+//     height: 10px;
+//     background-color: white;
+//   }
+  
+//   ::-webkit-scrollbar-thumb {
+//     background: white;
+//     border-radius: 15px;
+//   }
+
+//   ::-webkit-scrollbar-button {
+//     display: none;
+// }
+
+@layer components {
+    .block1 {
+        @apply flex items-center px-2.5 rounded-[80px] shadow bg-white;
+        box-shadow: 0px 4px 4px 0px rgba(187, 190, 198, 0.1);
+    }
+    .block2 {
+        @apply flex items-center rounded-[80px] shadow bg-white;
+        box-shadow: 0px 4px 4px 0px rgba(187, 190, 198, 0.1);
+    }
+    .card {
+        @apply flex items-center rounded-[8px] bg-white p-[10px];
+    }
+    .navItem {
+        @apply hover:bg-gray1 h-full flex items-center rounded-[50px] px-[20px] font-bold unbounded;
+    }
+    .navItem_active {
+        @apply bg-prim1 h-full flex items-center rounded-[50px] px-[20px] font-bold unbounded flex-col justify-center pt-2 gap-1;
+    }
+    .line {
+        @apply w-2 h-[2px] rounded-[39px] bg-prim3;
+    }
+    //text
+    .text-u-h1 {
+        @apply xs:text-h1 text-[28px] unbounded xs:leading-[60px] leading-8;
+        letter-spacing: -0.4px;
+    }
+    .text-u-h2 {
+        @apply xs:text-h2 unbounded xs:leading-[36px] leading-6 text-[20px];
+        letter-spacing: -0.4px;
+    }
+    .text-u-h3 {
+        @apply xs:text-h3 text-[18px] unbounded xs:leading-6 leading-5;
+        //line-height: 26.4px;
+        letter-spacing: -0.4px;
+    }
+    .text-u-h4 {
+        @apply text-p2 unbounded xs:leading-6 leading-5;
+        //line-height: 17.6px;
+        letter-spacing: -0.4px;
+    }
+    .text-u-p {
+        @apply text-p3 unbounded;
+        letter-spacing: -0.4px;
+    }
+    .text-i-p1 {
+        @apply text-p1 inter;
+        letter-spacing: -0.4px;
+    }
+    .text-i-p2 {
+        @apply xs:text-p2 text-p3 inter xxs:leading-6 leading-5;
+        letter-spacing: -0.4px;
+    }
+    .text-i-p3 {
+        @apply text-p3 inter xxs:leading-4 leading-3;
+        //line-height: 15.4px;
+        letter-spacing: -0.4px;
+    }
+    .text-i-p4 {
+        @apply text-p4 inter;
+        letter-spacing: -0.4px;
+    }
+    //buttons
+    .btn {
+        @apply flex justify-between items-center rounded-lg font-medium select-none;
+        //line-height: 17.6px;
+    }
+    .btn__p {
+        @apply text-i-p2 btn text-white1 bg-prim3 p-3 xs:p-5;
+
+        & svg path{
+            stroke: rgb(255 255 255);
+        }
+
+        &:hover {
+            @apply bg-prim4
+        }
+        &:active {
+            @apply bg-prim5
+        }
+        &:disabled {
+            @apply bg-gray-100 text-gray3;
+            & svg path{
+                stroke: #BEBECB;
+            }
+        }
+    }
+    .btn__r {
+        @apply text-i-p2 btn text-prim3 bg-prim1 p-3 xs:p-5 flex justify-between items-center rounded-[41px] font-medium select-none;
+
+        & svg path{
+            stroke: rgb(81 190 249);
+        }
+
+        &:hover {
+            @apply text-prim4;
+
+            & svg path{
+                stroke: rgb(0 125 191);
+            }
+        }
+        &:active {
+            @apply text-prim4 bg-prim3;
+            & svg path{
+                stroke: #007DBF;
+            }
+        }
+        &:disabled {
+            @apply bg-gray-100 text-gray3;
+            & svg path{
+                stroke: #BEBECB;
+            }
+        }
+    }
+    .btn__s {
+        @apply text-i-p2 btn text-prim3 bg-prim1 p-3 xs:p-5;
+
+        & svg path{
+            stroke: rgb(81 190 249);
+        }
+
+        &:hover {
+            @apply text-prim4;
+
+            & svg path{
+                stroke: rgb(0 125 191);
+            }
+        }
+        &:active {
+            @apply text-prim4 bg-prim3;
+            & svg path{
+                stroke: #007DBF;
+            }
+        }
+        &:disabled {
+            @apply bg-gray-100 text-gray3;
+            & svg path{
+                stroke: #BEBECB;
+            }
+        }
+    };
+    .btn__s_del {
+        @apply text-i-p2 btn text-red-500 bg-prim1;
+
+        & svg path{
+            stroke:  rgb(239 68 68);
+        }
+
+        &:hover {
+            @apply text-red-600;
+
+            & svg path{
+                stroke: rgb(220 38 38) ;
+            }
+        }
+        &:active {
+            @apply text-red-700 bg-red-500;
+            & svg path{
+                stroke: rgb(185 28 28);
+            }
+        }
+        &:disabled {
+            @apply bg-gray-100 text-gray3;
+            & svg path{
+                stroke: #BEBECB;
+            }
+        }
+    };
+    .btn__d {
+        @apply text-i-p2 btn text-gray5 bg-gray1 p-3 xs:p-5;
+
+        & svg path{
+            stroke: rgb(91 91 95);
+        }
+
+        &:hover {
+            @apply bg-gray2;
+        }
+        &:active {
+            @apply bg-gray3
+        }
+        &:disabled {
+            @apply bg-gray-100 text-gray3;
+            & svg path{
+                stroke: #BEBECB;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../../vars.scss';
+
+.navigate {
+    @apply flex items-center gap-[16px] xs:gap-[24px] cursor-pointer text-gray4 hover:text-gray6;
+    & svg path{
+        stroke: $gray4;
+    }
+    &:hover svg path{
+        stroke: $gray6;
+    }
+}
+
+.navigate_sec {
+    @apply hidden xs:flex items-center gap-[16px] xs:gap-[24px] cursor-pointer text-gray4 hover:text-gray6;
+    & svg path{
+        stroke: $gray4;
+    }
+    &:hover svg path{
+        stroke: $gray6;
+    }
+}
+
+.prev {
+    @apply absolute z-20 left-[10px];
+    top: calc(50% - 12px);
+}
+
+.next {
+    @apply absolute z-20 top-0 right-[10px];
+    top: calc(50% - 12px);
+}
+
+.slider2 {
+    @apply h-[58px] w-auto;
+}

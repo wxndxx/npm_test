@@ -1,0 +1,32 @@
+.profile {
+    @apply w-full
+}
+.content {
+    @apply bg-white w-full m:p-[50px_116px] xs:p-[30px_90px] p-[20px] flex flex-col gap-[30px] rounded-[8px]
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.spin_m {
+    animation: spin 5s linear infinite;
+
+}
+
+.spin {
+    animation: spin 5s linear infinite;
+}
+
+.label {
+    @apply flex flex-col gap-[10px];
+
+    & p {
+        @apply text-p3;
+    }
+}

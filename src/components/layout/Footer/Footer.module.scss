@@ -1,0 +1,31 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+.footer {
+    @apply p-[40px_20px] l:p-[80px_0px] xs:p-[80px_20px] bg-gray6 text-gray4;
+
+    & ul {
+        @apply flex flex-col;
+        & li {
+            @apply mb-[10px] text-white hover:text-prim2
+        }
+        & li:first-child {
+            @apply mb-[15px] text-gray4 
+        }
+
+        & li:last-child {
+            @apply mb-[0px]
+        }
+    }
+}
+
+.social {
+    @apply flex gap-[15px] flex-col;
+    & svg {
+        @apply cursor-pointer;
+        &:hover path{
+            fill: rgba(161, 222, 255, 1)
+        }
+    }
+}

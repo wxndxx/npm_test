@@ -1,0 +1,23 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    &__wrapper{
+      // max-width: 1840px;
+      // height: 100%;
+      // width: 100%;
+      // display: flex;
+      // align-items: center;
+      // flex-direction: column;
+      //xl:max-w-[1840px]
+      @apply l:max-w-[1360px] px-[10px] l:px-0 w-full h-full flex items-center flex-col
+    }
+  }
+  

@@ -1,0 +1,8 @@
+.card {
+    @apply w-full flex-col justify-between gap-[10px] cursor-pointer flex items-center rounded-[8px] bg-white p-[10px] relative;
+    //box-shadow: 0px 4px 4px 0px rgba(51, 49, 65, 0.1);
+}
+.popup {
+    @apply absolute flex flex-col w-full gap-[10px] bg-white p-[10px] rounded-b-[8px] z-10 bottom-[-105px] xxs:bottom-[-112px] left-0;
+    box-shadow: 0px 4px 4px 0px rgba(51, 49, 65, 0.1);
+}

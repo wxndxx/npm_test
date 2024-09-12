@@ -1,0 +1,83 @@
+.first {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    grid-column: span 2 / span 2;
+    grid-row:  8 /  25;
+}
+
+.sec {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    grid-column: span 4 / span 4;
+    grid-row: span 24 / span 24;
+}
+
+.third {
+    position: relative;
+    display: grid;
+    grid-column: span 6 / span 6;
+    grid-row: span 36 / span 36;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+}
+
+.fourth {
+    display: block;
+    position: relative;
+    grid-column: span 5 / span 5;
+    grid-row: span 6 / span 6;
+}
+
+.fifth {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    grid-column: span 3 / span 3;
+    grid-row: span 21 / 29;
+}
+
+.sixth {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    grid-column: span 3 / span 3;
+    grid-row: span 21 / 37;
+}
+
+.prev {
+    @apply absolute left-0 z-20;
+    top: calc(50%);
+}
+
+.next {
+    @apply absolute right-0 z-20;
+    top: calc(50%);
+}
+
+@media screen and (max-width:1360px) {
+    .third {
+        grid-row: span 71 / span 71;
+    }
+    .fourth {
+        display: none;
+    }
+    .fifth {
+        grid-column: span 6 / span 3;
+        grid-row: span 27 / 28;
+    }
+    .sixth {
+        grid-column: span 6 / span 6;
+        grid-row: span 42 / 71;
+    }
+    .first {
+        grid-column: span 6 / span 6;
+        grid-row: span 34 / 37;
+    }
+    
+    .sec {
+        grid-column: span 6 / span 6;
+        grid-row: span 33 / 71;
+    }
+}

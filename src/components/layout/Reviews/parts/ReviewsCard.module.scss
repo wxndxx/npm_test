@@ -1,0 +1,14 @@
+
+.btn__d {
+    @apply text-p2 leading-5 justify-between items-center rounded-lg font-medium select-none text-gray5 bg-gray1;
+
+    &:hover {
+        @apply bg-gray2;
+    }
+    &:active {
+        @apply bg-gray3
+    }
+    &:disabled {
+        @apply bg-gray-100 text-gray3;
+    }
+}

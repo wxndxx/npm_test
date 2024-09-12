@@ -1,0 +1,61 @@
+.back:hover {
+    & svg path{
+        stroke: rgb(81 190 249);
+    }
+    & p {
+        color: rgb(81 190 249);
+    }
+}
+
+.appointmentCard {
+    @apply xs:p-[30px] p-[20px] rounded-[8px] border border-gray2 flex flex-col gap-[15px] overflow-hidden;
+}
+
+.slider_card:hover {
+    .card_hidden {
+        display: flex;
+    }
+}
+
+.cardBig {
+    @apply m:h-[770px] h-[262px] xxs:h-[450px] w-[1100px] overflow-hidden relative;
+}
+
+.slider_card {
+    cursor: pointer;
+    line-height: 11px;
+}
+
+.card_hidden {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.slider {
+    // position: absolute ;
+    height: 100%;
+    width: 100%;
+    // max-width: 1100px;
+    // &:last-child {
+    //     padding-right: 20px
+    // }
+}
+
+.prev {
+    @apply absolute z-30 left-[10px] ;
+    top: calc(50% - 15px);
+}
+
+.next {
+    @apply absolute z-30 top-0 right-[10px] ;
+    top: calc(50% - 15px);
+}
+@media (min-width: 600px) {
+    .prev {
+        top: calc(50% - 24px);
+    }
+    .next {
+        top: calc(50% - 24px);
+    }
+}
+

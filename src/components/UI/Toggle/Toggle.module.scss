@@ -1,0 +1,56 @@
+.checkbox {
+    @apply w-6 h-6 rounded-[5px] border border-gray2 bg-gray1 cursor-pointer;
+    transition: background-color .5s;
+    &:hover {
+        @apply border-prim2 bg-prim1;
+        transition: background-color .5s;
+    }
+    & svg {
+        @apply hidden;
+    }
+
+    &_active {
+        @apply w-6 h-6 rounded-[5px] bg-prim2 flex justify-center items-center cursor-pointer;
+        transition: background-color .5s;
+
+        & svg {
+            @apply w-[11px] h-[11px];
+        }
+    }
+}
+
+
+.toggle {
+    @apply w-11 h-6 relative rounded-2xl overflow-hidden cursor-pointer bg-gray2;
+}
+
+.background {
+    @apply absolute top-0 left-0 z-[9] bg-gray2 w-full h-full;
+    transition: background-color .5s;
+    &__active {
+        @apply absolute top-0 left-0 z-[9]  bg-prim3 w-full h-full;
+        transition: background-color .5s;
+    }
+}
+
+.forvard {
+    @apply absolute top-[2px] left-[2px] z-10 w-[20px] h-[20px] bg-white rounded-[50%];
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+    transition: left .5s;
+
+    &__active {
+        @apply absolute top-[2px] left-[22px] z-10 w-[20px] h-[20px] bg-white rounded-[50%];
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+        transition: left .5s;
+    }
+}
+
+// .background {
+//     @apply w-10 h-10 bg-gray2;
+//     transition: background-color 2s;
+//     &__active {
+//         @apply w-10 h-10 bg-prim3;
+//     transition: background-color 2s;
+//     }
+
+// }

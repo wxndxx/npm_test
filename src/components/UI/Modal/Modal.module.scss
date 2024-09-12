@@ -1,0 +1,29 @@
+.modal {
+    @apply w-full fixed top-0 left-0 h-full z-modal flex items-center justify-center bg-[#00000080];
+    
+    &__content {
+        @apply xxs:p-[30px] p-[20px_16px] rounded-[16px] bg-white relative;
+    }
+    &__close {
+        @apply hidden
+    }
+    &__slider {
+        @apply w-[80%] h-[80%]
+    }
+
+}
+
+.slider {
+    @apply bg-black xxs:bg-[#00000080] w-full fixed top-0 left-0 h-full z-modal flex items-center justify-center;
+    &__close {
+        @apply hidden
+    }
+}
+
+@media screen and (max-heigth: 380px) {
+    .modal {
+        &__container {
+            overflow-y: scroll;
+        }
+    }
+}

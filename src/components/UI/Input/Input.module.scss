@@ -1,0 +1,64 @@
+
+.input {
+    @apply p-3 xs:p-4 border rounded-lg border-gray2 text-p2 flex items-center gap-3 bg-white;
+
+    &:hover {
+        @apply border-gray3 bg-prim1;
+    }
+
+    & input {
+        @apply w-full outline-none text-gray4 font-medium bg-inherit select-none;
+    }
+
+    & input:focus {
+        @apply  text-gray5 bg-prim1;
+    }
+
+    & textarea {
+        @apply w-full outline-none text-gray4 font-medium bg-inherit select-none ;
+    }
+
+    & textarea:focus {
+        @apply  text-gray5 bg-white bg-inherit;
+    }
+
+    & svg {
+        @apply cursor-pointer;
+    }
+
+    &_focus {
+        @apply border-prim3 p-3 xs:p-4 border rounded-lg text-p2 flex items-center gap-3 bg-white;
+
+        &:hover {
+            @apply bg-prim1;
+        }
+    
+        & input {
+            @apply w-full outline-none text-gray4 font-medium bg-inherit;
+        }
+    
+        & input:focus {
+            @apply  text-gray5;
+        }
+    
+        & svg {
+            @apply cursor-pointer;
+        }
+
+        & textarea {
+            @apply w-full outline-none text-gray4 font-medium bg-inherit select-none;
+        }
+    
+        & textarea:focus {
+            @apply  text-gray5 bg-inherit;
+        }
+    }
+}
+
+.disabled {
+    @apply border-gray3 p-3 xs:p-4 border rounded-lg text-p2 flex items-center gap-3 bg-gray1;
+
+    & input:disabled{
+        @apply w-full outline-none text-gray4 font-medium bg-inherit select-none;
+    }
+}

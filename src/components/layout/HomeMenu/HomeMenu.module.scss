@@ -1,0 +1,31 @@
+.conent {
+    @apply pt-[20px] w-full flex justify-between items-center h-auto xs:h-[500px] m:h-[630px] gap-[40px] special:gap-[10px] special:flex-row flex-col
+}
+
+.left {
+    @apply flex-col p-[15px] xxs:p-[20px] gap-[20px] xxs:gap-[30px] rounded-[8px] border-gray2 border h-full flex justify-center m:max-w-[907px] special:w-full w-[80%];
+}
+
+.right {
+    @apply w-[343px] special:w-[400px] h-[460px] special:h-full l:h-[auto] relative overflow-hidden;
+}
+
+.dots {
+    @apply w-[80px] h-[28px] rounded-[59px] absolute bottom-[0px] special:top-[20px] right-[20px] z-20 flex justify-center items-center px-[15px];
+    background-color: rgba(48, 48, 54, 0.5);
+    @media screen and (max-width: 960px) {
+        right: calc(50% - 40px);
+    }
+}
+
+.next {
+    @apply absolute w-[12%] z-[20] right-0 top-0 h-[610px] cursor-pointer;
+    background: inherit;
+
+}
+
+.prev {
+    @apply absolute w-[12%] h-full z-[20] left-0  top-0 cursor-pointer;
+    transition: 1s;
+
+}

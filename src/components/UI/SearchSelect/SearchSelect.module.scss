@@ -1,0 +1,96 @@
+@import "../../../app/_vars";
+
+.select {
+    @apply flex flex-col gap-1 select-none;
+    // &_container {
+    //     @apply max-w-[300px];
+    // }
+
+    &__title {
+        @apply p-4 border rounded-lg border-gray2 text-p2 flex justify-between items-center gap-3 text-gray4 font-medium bg-white;
+
+        & svg path{
+            stroke: $gray5;
+        }
+
+        &:hover {
+            @apply border-gray3 bg-prim1;
+
+            & svg path{
+                stroke: rgb(81, 190, 249, 1);
+            }
+        }
+
+        &_active {
+            @apply p-4 bg-white border rounded-lg border-prim3 text-p2 flex justify-between items-center gap-3 text-gray6 font-medium;
+
+            & svg path{
+                stroke: rgb(0, 125, 191, 1);
+            }
+
+            &:hover {
+                @apply border-prim3 bg-prim1;
+
+                & svg path{
+                    stroke: rgb(0, 125, 191, 1);
+                }
+            }
+        }
+    }
+    
+}
+
+.select {
+    @apply relative;
+    &__body {
+        @apply w-full hidden;
+
+        &_active {
+            @apply w-full shadow-md rounded-[9px] bg-white max-h-[192px] overflow-hidden absolute z-popup top-[60px];
+            
+        }
+    }
+}
+//box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+.scroll {
+    @apply w-full h-full max-h-[192px];
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: rgba(217, 217, 227, 1);
+      }
+}
+
+.selected {
+    @apply flex h-12 items-center cursor-pointer text-prim3 justify-between px-[20px];
+
+    & svg path{
+        stroke: $prim3;
+    }
+
+    &:hover {
+        @apply bg-prim1;
+    }
+}
+
+.notselected {
+    @apply flex h-12 items-center cursor-pointer px-[20px];
+
+    &:hover {
+        @apply bg-prim1;
+    }
+}
+.svg {
+    @apply flex gap-[10px] items-center
+}
+
+.disabled {
+    @apply border-gray3 p-4 border rounded-lg text-p2 flex items-center gap-3 bg-gray1;
+
+    & input:disabled{
+        @apply w-full outline-none text-gray4 font-medium bg-inherit select-none;
+    }
+}

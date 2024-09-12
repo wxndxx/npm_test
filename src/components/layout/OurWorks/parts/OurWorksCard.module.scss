@@ -1,0 +1,16 @@
+.dots {
+    @apply w-[80px] h-[28px] rounded-[59px] z-20 flex justify-center items-center px-[15px];
+    background-color: rgba(48, 48, 54, 0.5);
+}
+
+.next {
+    @apply absolute w-[30%] z-[20] right-0 top-0 h-full cursor-pointer;
+    background: inherit;
+
+}
+
+.prev {
+    @apply absolute w-[30%] h-full z-[20] left-0  top-0 cursor-pointer;
+    transition: 1s;
+
+}

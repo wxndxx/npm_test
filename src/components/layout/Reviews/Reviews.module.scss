@@ -1,0 +1,28 @@
+
+
+.btn__s {
+    @apply justify-between items-center rounded-lg font-medium select-none text-prim3 bg-prim1;
+
+    &:hover {
+        @apply text-prim4;
+
+
+    }
+    &:active {
+        @apply text-prim4 bg-prim3;
+
+    }
+    &:disabled {
+        @apply bg-gray-100 text-gray3;
+
+    }
+};
+
+.slider {
+    width: calc(100% + 15px);
+}
+
+.dots {
+    @apply w-[80px] h-[28px] rounded-[59px] z-20 justify-center items-center px-[15px];
+    background-color: rgba(48, 48, 54, 0.5);
+}

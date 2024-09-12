@@ -1,0 +1,18 @@
+.wrapp {
+    @apply w-[896px] flex flex-col gap-[20px]
+}
+
+.slider {
+    width: 100%;
+}
+
+.card {
+    @apply xxs:px-[5px] px-[10px];
+    // display: flex !important;
+    // justify-content: space-between !important;
+}
+
+.dots {
+    @apply w-[80px] h-[28px] rounded-[59px] z-20 justify-center items-center px-[15px];
+    background-color: rgba(48, 48, 54, 0.5);
+}
